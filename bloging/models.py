@@ -18,6 +18,7 @@ class post(models.Model):
 
     #redirect -> redirect to specific route reverse-> reutrn the url as string ,then the view(postview) 
     #will take that url and redirect us to the location we specified wich is the 'post/<int:pk>/'
+    #reverser(viewName,kwargs)
     def get_absolute_url(self):
         return reverse("post-detail",kwargs={"pk":self.id})
   
