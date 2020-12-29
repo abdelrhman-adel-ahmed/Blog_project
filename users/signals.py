@@ -8,7 +8,7 @@ from .models import Profile
 # but there is not profile created)
 
 
-when ever user get saved the reciver will notified and the function will invoked and created profile for that user
+#when ever user get saved the reciver will notified and the function will invoked and created profile for that user
 @receiver(post_save,sender=User)
 def create_profile(sender,instance,created,**kwargs):
     if created:
